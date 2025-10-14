@@ -15654,7 +15654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1109758073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16954,6 +16954,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803296168205488287, guid: 51bd9d5004648ca48b235b88b95b5e19,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722039752391148558, guid: 51bd9d5004648ca48b235b88b95b5e19,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5477544044491301251, guid: 51bd9d5004648ca48b235b88b95b5e19,
         type: 3}
@@ -28647,6 +28657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ceiling Light Assembly (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181293962756964005, guid: 520f1d524bf7af346ab81c1f3c29e6aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2297008968537735310, guid: 520f1d524bf7af346ab81c1f3c29e6aa,
         type: 3}

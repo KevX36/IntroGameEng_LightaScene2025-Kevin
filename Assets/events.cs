@@ -8,8 +8,10 @@ public class events : MonoBehaviour
     {
         
     }
+    private bool stayOff = false;
     public GameObject lightsOutButton;
     public PlayableDirector lightsOut;
+    public GameObject lightThatGoesOut;
     public GameObject doorSwingButton;
     public PlayableDirector doorSwing;
     public GameObject button;
@@ -17,16 +19,24 @@ public class events : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (stayOff == true)
+        {
+            lightThatGoesOut.gameObject.SetActive(false);
+        }
+        else
+        {
+            lightThatGoesOut.gameObject.SetActive(true);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(""))
+        if (other.gameObject.CompareTag("lightsOff"))
         {
             lightsOut.Play();
             lightsOutButton.gameObject.SetActive(false);
+            stayOff = true;
         }
-        if (other.gameObject.CompareTag(""))
+        if (other.gameObject.CompareTag("DoorSwing"))
         {
             doorSwing.Play();
             doorSwingButton.gameObject.SetActive(false);

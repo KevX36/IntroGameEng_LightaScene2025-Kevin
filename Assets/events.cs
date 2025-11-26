@@ -8,14 +8,15 @@ public class events : MonoBehaviour
     {
         
     }
+    public GameObject death;
     private bool stayOff = false;
     public GameObject lightsOutButton;
     public PlayableDirector lightsOut;
     public GameObject lightThatGoesOut;
     public GameObject doorSwingButton;
     public PlayableDirector doorSwing;
-    public GameObject button;
-    public PlayableDirector play;
+    public GameObject finalTrigger;
+    public PlayableDirector goodNight;
     // Update is called once per frame
     void Update()
     {
@@ -41,10 +42,11 @@ public class events : MonoBehaviour
             doorSwing.Play();
             doorSwingButton.gameObject.SetActive(false);
         }
-        if (other.gameObject.CompareTag(""))
+        if (other.gameObject.CompareTag("You'reNext"))
         {
-            play.Play();
-            button.SetActive(false);
+            death.gameObject.SetActive(true);
+            goodNight.Play();
+            finalTrigger.SetActive(false);
         }
     }
 }
